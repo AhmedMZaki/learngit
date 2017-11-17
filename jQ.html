@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>learnning jQuery</title>
+      <script src="jquery.js" charset="utf-8"></script>
+      <style media="screen">
+        .a{
+          color: maroon;
+        }
+        .b{
+          color: olive;
+
+        }
+      </style>
+  </head>
+  <body>
+    <div id="listitems">
+    <ul >
+      <li class="a" >list 1</li>
+      <li class="b">list 2</li>
+      <li class="b">list 3</li>
+      <li class="a" readOnly="readonly">list 4</li>
+    </ul>
+    </div>
+    <div>
+      <p class="a">Ahmed Zaki 1</p>
+      <p class="b">Ahmed Zaki 2</p>
+      <p class="a">Ahmed Zaki 3</p>
+      <p class="b">Ahmed Zaki 4</p>
+    </div>
+    <script>
+    $(document).ready(function(){
+      $('#listitems').css('border','2px solid red');
+    });
+    </script>
+  </body>
+</html>

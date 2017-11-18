@@ -8,7 +8,7 @@
   <body>
     <div id="root">
       <input type="text" id="input" name="addname" v-model="newName"/>
-      <input type="button" value="Add Name" v-on:click="addName">
+      <input type="button" value="Add Name" :title="title" v-on:click="addName">
       <p v-for="name in names" v-text="name"></p>
     </div>
     <script type="text/javascript">
@@ -17,14 +17,19 @@
       data:{
         message:'Hello World!',
         newName:'',
+        title:'click the button to add new name',
         names:[
           'Ahmed','Mohmed','Zaki','Ali'
         ]
       },
       methods:{
         addName:function(){
-          this.names.push(this.newName);
-          this.newName=null;
+          if (this.newName !=null) {
+            this.names.push(this.newName);
+            this.newName=null;
+          }else{
+            alert('please provide name to add');
+          }
         }
       }
     })

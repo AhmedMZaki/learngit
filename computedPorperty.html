@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>The Need for Computed Properties</title>
+    <link rel="icon" href="html.ico">
+      <script src="  https://unpkg.com/vue@2.5.3/dist/vue.js" charset="utf-8"></script>
+  </head>
+  <body>
+
+<div id="root">
+    <ul>
+      <li v-for="task in tasks" v-if="task.asdf=='asdf'">{{task.asdf}}</li>
+    </ul>
+
+</div>
+
+<script type="text/javascript">
+
+  var app=new Vue({
+    el:'#root',
+    data:{
+      tasks:[
+        {asd:'asd',asdf:'asd'},
+        {asd:'asd',asdf:'asd'},
+        {asd:'asd',asdf:'asdf'},
+        {asd:'asd',asdf:'asdf'}
+      ]
+    }
+
+  })
+
+</script>
+  </body>
+</html>

@@ -1,3 +1,4 @@
+// jQuery selector to make sure DOM is loadded successfully
 $(document).ready(function(){
   Vue.component("message",{
     // this line tells vue component which values to allow

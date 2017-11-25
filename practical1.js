@@ -1,5 +1,6 @@
 $(document).ready(function(){
   Vue.component("message",{
+    // this line tells vue component which values to allow
     props:['title','body'],
     data(){
       return {

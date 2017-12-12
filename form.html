@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Vue Guid</title>
+  <!-- <link rel="stylesheet" href="main.css"> -->
+  <link rel="icon" href="html.ico">
+    <script src="  https://unpkg.com/vue@2.5.3/dist/vue.js" charset="utf-8"></script>
+    <style media="screen">
+      .error{
+        color:red;
+      }
+    </style>
+</head>
+  <body>
+<div id="root">
+  <form method="post" action="newVue.html">
+    <span class="error" v-show="!message">
+      you must enter a message
+    </span> <br>
+<textarea name="name" rows="8" cols="80" v-model="message" ></textarea><br>
+    <button type="submit" v-show="message">
+      Send Message
+    </button>
+
+
+          <pre>
+            {{$data|JSON}}
+          </pre>
+  </form>
+</div>
+<script type="text/javascript">
+var app = new Vue({
+el:'#root',
+data:{
+  message:''
+}
+});
+</script>
+  </body>
+</html>

@@ -9,11 +9,19 @@
   </head>
   <body>
     <div id="root">
+      <h1>{{message}}</h1>
+      <input type="text" v-model="message"/>
 
+      <pre>
+        {{$data|JSON}}
+      </pre>
     </div>
     <script type="text/javascript">
       var app = new Vue({
-        el:'#root'
+        el:'#root',
+        data:{
+          message:'hello world'
+        }
 
       })
     </script>

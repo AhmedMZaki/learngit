@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>reviewing Vue</title>
+    <link rel="icon" href="html.ico">
+      <script src="  https://unpkg.com/vue@2.5.3/dist/vue.js" charset="utf-8"></script>
+  </head>
+  <body>
+
+    <div id="app1">
+      <p>Using mustaches: {{ rawHtml }}</p>
+      <p>Using v-html directive: <span v-html="rawHtml"></span></p>
+      <h4 v-html="h2"></h4>
+      <h4 :style="style">this html text</h4>
+    </div>
+<div id="root">
+      <ol>
+        <todo-item v-for="item in groceryList" v-bind:todo="item" v-bind:key="item.id"></todo-item>
+      </ol>
+</div>
+<script type="text/javascript">
+var app1=new Vue({
+  el:'#app1',
+  data:{
+    rawHtml:'<span style="color:olive">this is should be olive</span>',
+    h2:'<h4>this html heading h2</h4>',
+    style:'color:olive;font-family:sans-serif'
+  }
+})
+
+Vue.component('todo-item', {
+ props: ['todo'],
+template: '<li><slot>{{todo.text}}</slot></li>'
+});
+
+var app7 = new Vue({
+  el: '#root',
+  data: {
+    groceryList: [
+      {  text: 'Vegetables' },
+      {  text: 'Cheese' },
+      {  text: 'Whatever else humans are supposed to eat' }
+    ]
+  }
+});
+
+</script>
+  </body>
+</html>
